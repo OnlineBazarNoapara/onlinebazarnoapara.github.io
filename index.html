@@ -1,676 +1,744 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="bn" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <title>Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals</title>
-    <meta name="description" content="Discover amazing deals on electronics, fashion, home & living products at Online Bazar Nopara. Your one-stop shop for quality goods, unbeatable prices, and excellent customer service in Bangladesh.">
-    <meta name="keywords" content="online marketplace, e-commerce, shopping deals, electronics, fashion, home living, Bangladesh online shop, best prices, quality products, customer service">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://onlinebazarnopara.com/">
-    <meta property="og:title" content="Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals">
-    <meta property="og:description" content="Shop the best deals on electronics, fashion, and more at Online Bazar Nopara. Quality products, unbeatable prices, and excellent service in Bangladesh.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://onlinebazarnopara.com/">
-    <meta property="twitter:title" content="Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals">
-    <meta property="twitter:description" content="Shop the best deals on electronics, fashion, and more at Online Bazar Nopara. Quality products, unbeatable prices, and excellent service in Bangladesh.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
-
-    <!-- Alternate URLs -->
-    <link rel="canonical" href="https://onlinebazarnopara.com/">
-    <link rel="alternate" href="https://onlinebazarnopara.github.io/" hreflang="en-us">
-    <link rel="alternate" href="https://onlinebazarnopara.vercel.app/" hreflang="en-gb">
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152" rel="stylesheet">
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152');
-    </style>
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #f8f9fa;
-            --accent-color: #ff6b6b;
-            --gradient-1: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-            --gradient-2: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-            --text-color: #333333;
-            --light-text-color: #ffffff;
-            --link-color: #2970ff;
-            --border-color: #e9ecef;
-            --success-color: #28a745;
-            --warning-color: #ffc107;
-            --error-color: #dc3545;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', 'Li Ador Noirrit', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--secondary-color);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Header Styles */
-        .header {
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .logo a {
-            color: var(--light-text-color);
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-menu {
-            display: flex;
-        }
-
-        .nav-menu li {
-            list-style-type: none;
-        }
-
-        .nav-menu a {
-            color: var(--light-text-color);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--light-text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-image: var(--gradient-1), url('https://source.unsplash.com/random/1600x900/?marketplace');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--light-text-color);
-            margin-top: 60px;
-        }
-
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 8px;
-            max-width: 600px;
-            backdrop-filter: blur(5px);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .bangla-text {
-            font-family: 'Li Ador Noirrit', sans-serif;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-image: var(--gradient-1);
-            color: var(--light-text-color);
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            font-weight: bold;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Featured Products */
-        .featured-products {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background-image: var(--gradient-2);
-            background-blend-mode: overlay;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 0 0 8px 8px;
-        }
-
-        .product-title {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .product-price {
-            font-weight: bold;
-            color: var(--accent-color);
-            font-size: 1.1rem;
-        }
-
-        .product-rating {
-            color: var(--warning-color);
-            margin-top: 0.5rem;
-        }
-
-        /* Categories Section */
-        .categories {
-            background-color: var(--light-text-color);
-            padding: 4rem 0;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .category-card {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: var(--secondary-color);
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .category-card:hover {
-            background-color: var(--border-color);
-            transform: translateY(-5px);
-        }
-
-        .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        /* Newsletter Section */
-        .newsletter {
-            background-image: var(--gradient-2);
-            color: var(--light-text-color);
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .newsletter-form {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .newsletter-input {
-            padding: 0.8rem;
-            width: 300px;
-            border: none;
-            border-radius: 4px 0 0 4px;
-        }
-
-        .newsletter-button {
-            background-color: var(--accent-color);
-            color: var(--light-text-color);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter-button:hover {
-            background-color: #ff8585;
-        }
-
-        /* Footer */
-        .footer {
-            background-image: linear-gradient(to bottom, #2c3e50, #1a252f);
-            color: var(--light-text-color);
-            padding: 3rem 0;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: var(--light-text-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            color: var(--light-text-color);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-menu {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                margin-top: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu li {
-                margin-bottom: 0.5rem;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-            }
-
-            .hero {
-                height: 60vh;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .newsletter-input {
-                width: 100%;
-                max-width: 300px;
-                margin-bottom: 1rem;
-                border-radius: 4px;
-            }
-
-            .newsletter-button {
-                width: 100%;
-                max-width: 300px;
-                border-radius: 4px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>অনলাইন বাজার নোপাড়া - আপনার বিশ্বস্ত অনলাইন মার্কেটপ্লেস</title>
+  <meta name="description" content="অনলাইন বাজার নোপাড়ায় ইলেকট্রনিক্স, ফ্যাশন, হোম লিভিং পণ্যের অসাধারণ ডিল আবিষ্কার করুন। বাংলাদেশে মানসম্মত পণ্য, সেরা মূল্য এবং উৎকৃষ্ট গ্রাহক সেবার জন্য আপনার একমাত্র গন্তব্য।">
+  <meta name="keywords" content="অনলাইন মার্কেটপ্লেস, ই-কমার্স, শপিং ডিল, ইলেকট্রনিক্স, ফ্যাশন, হোম লিভিং, বাংলাদেশ অনলাইন শপ, সেরা মূল্য, মানসম্মত পণ্য, গ্রাহক সেবা">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onlinebazarnopara.com/">
+  <meta property="og:title" content="অনলাইন বাজার নোপাড়া - আপনার বিশ্বস্ত অনলাইন মার্কেটপ্লেস">
+  <meta property="og:description" content="অনলাইন বাজার নোপাড়ায় ইলেকট্রনিক্স, ফ্যাশন এবং আরও অনেক কিছুর সেরা ডিল পান। বাংলাদেশে মানসম্মত পণ্য, সেরা মূল্য এবং উৎকৃষ্ট সেবা।">
+  <meta property="og:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://onlinebazarnopara.com/">
+  <meta property="twitter:title" content="অনলাইন বাজার নোপাড়া - আপনার বিশ্বস্ত অনলাইন মার্কেটপ্লেস">
+  <meta property="twitter:description" content="অনলাইন বাজার নোপাড়ায় ইলেকট্রনিক্স, ফ্যাশন এবং আরও অনেক কিছুর সেরা ডিল পান। বাংলাদেশে মানসম্মত পণ্য, সেরা মূল্য এবং উৎকৃষ্ট সেবা।">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
+
+  <!-- Alternate URLs -->
+  <link rel="canonical" href="https://onlinebazarnopara.com/">
+  <link rel="alternate" href="https://onlinebazarnopara.github.io/" hreflang="en-us">
+  <link rel="alternate" href="https://onlinebazarnopara.vercel.app/" hreflang="en-gb">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152" rel="stylesheet">
+  <style>
+      @import url('https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152');
+  </style>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+      :root {
+          --primary-color: #4a90e2;
+          --secondary-color: #f8f9fa;
+          --accent-color: #ff6b6b;
+          --gradient-1: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+          --gradient-2: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+          --text-color: #333333;
+          --light-text-color: #ffffff;
+          --link-color: #2970ff;
+          --border-color: #e9ecef;
+          --success-color: #28a745;
+          --warning-color: #ffc107;
+          --error-color: #dc3545;
+      }
+
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+
+      body {
+          font-family: 'Li Ador Noirrit', 'Roboto', sans-serif;
+          line-height: 1.6;
+          color: var(--text-color);
+          background-color: var(--secondary-color);
+      }
+
+      .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
+
+      /* Header Styles */
+      .header {
+          background-color: var(--primary-color);
+          color: var(--light-text-color);
+          padding: 1rem 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .logo {
+          display: flex;
+          align-items: center;
+      }
+
+      .logo img {
+          width: 50px;
+          height: auto;
+          margin-right: 10px;
+      }
+
+      .logo a {
+          color: var(--light-text-color);
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
+      .nav-menu {
+          display: flex;
+      }
+
+      .nav-menu li {
+          list-style-type: none;
+      }
+
+      .nav-menu a {
+          color: var(--light-text-color);
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: background-color 0.3s ease;
+      }
+
+      .nav-menu a:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 4px;
+      }
+
+      .mobile-menu-toggle {
+          display: none;
+          background: none;
+          border: none;
+          color: var(--light-text-color);
+          font-size: 1.5rem;
+          cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+          background-image: var(--gradient-1), url('https://source.unsplash.com/random/1600x900/?marketplace');
+          background-size: cover;
+          background-position: center;
+          background-blend-mode: overlay;
+          height: 70vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: var(--light-text-color);
+          margin-top: 60px;
+      }
+
+      .hero-content {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 2rem;
+          border-radius: 8px;
+          max-width: 600px;
+          backdrop-filter: blur(5px);
+      }
+
+      .hero h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+      }
+
+      .hero p {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+      }
+
+      .cta-button {
+          display: inline-block;
+          background-image: var(--gradient-1);
+          color: var(--light-text-color);
+          padding: 0.8rem 1.5rem;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          font-weight: bold;
+      }
+
+      .cta-button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Featured Products */
+      .featured-products {
+          padding: 4rem 0;
+      }
+
+      .section-title {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 2rem;
+          color: var(--primary-color);
+      }
+
+      .section-subtitle {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          color: var(--primary-color);
+      }
+
+      .product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+      }
+
+      .product-card {
+          background-image: var(--gradient-2);
+          background-blend-mode: overlay;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+          height: 200px;
+          overflow: hidden;
+      }
+
+      .product-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+      }
+
+      .product-card:hover .product-image img {
+          transform: scale(1.1);
+      }
+
+      .product-info {
+          padding: 1rem;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 0 0 8px 8px;
+      }
+
+      .product-title {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: var(--text-color);
+      }
+
+      .product-price {
+          font-weight: bold;
+          color: var(--accent-color);
+          font-size: 1.1rem;
+      }
+
+      .product-rating {
+          color: var(--warning-color);
+          margin-top: 0.5rem;
+      }
+
+      /* Categories Section */
+      .categories {
+          background-color: var(--light-text-color);
+          padding: 4rem 0;
+      }
+
+      .category-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+      }
+
+      .category-card {
+          text-align: center;
+          padding: 1.5rem;
+          background-color: var(--secondary-color);
+          border-radius: 8px;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .category-card:hover {
+          background-color: var(--border-color);
+          transform: translateY(-5px);
+      }
+
+      .category-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: var(--primary-color);
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+          background-image: var(--gradient-2);
+          color: var(--light-text-color);
+          padding: 4rem 0;
+          text-align: center;
+      }
+
+      .newsletter-form {
+          display: flex;
+          justify-content: center;
+          margin-top: 1.5rem;
+      }
+
+      .newsletter-input {
+          padding: 0.8rem;
+          width: 300px;
+          border: none;
+          border-radius: 4px 0 0 4px;
+      }
+
+      .newsletter-button {
+          background-color: var(--accent-color);
+          color: var(--light-text-color);
+          border: none;
+          padding: 0.8rem 1.5rem;
+          border-radius: 0 4px 4px 0;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .newsletter-button:hover {
+          background-color: #ff8585;
+      }
+
+      /* Footer */
+      .footer {
+          background-image: linear-gradient(to bottom, #2c3e50, #1a252f);
+          color: var(--light-text-color);
+          padding: 3rem 0;
+      }
+
+      .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
+      }
+
+      .footer-section h3 {
+          margin-bottom: 1rem;
+          color: var(--accent-color);
+      }
+
+      .footer-links li {
+          margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+          color: var(--light-text-color);
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+          color: var(--accent-color);
+      }
+
+      .social-icons {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+      }
+
+      .social-icons a {
+          color: var(--light-text-color);
+          font-size: 1.5rem;
+          transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+          color: var(--accent-color);
+      }
+
+      .footer-bottom {
+          text-align: center;
+          padding-top: 2rem;
+          margin-top: 2rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .header-content {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+
+          .nav-menu {
+              display: none;
+              width: 100%;
+              flex-direction: column;
+              margin-top: 1rem;
+          }
+
+          .nav-menu.active {
+              display: flex;
+          }
+
+          .nav-menu li {
+              margin-bottom: 0.5rem;
+          }
+
+          .mobile-menu-toggle {
+              display: block;
+              position: absolute;
+              top: 1rem;
+              right: 1rem;
+          }
+
+          .hero {
+              height: 60vh;
+          }
+
+          .hero h1 {
+              font-size: 2rem;
+          }
+
+          .hero p {
+              font-size: 1rem;
+          }
+
+          .newsletter-form {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          .newsletter-input {
+              width: 100%;
+              max-width: 300px;
+              margin-bottom: 1rem;
+              border-radius: 4px;
+          }
+
+          .newsletter-button {
+              width: 100%;
+              max-width: 300px;
+              border-radius: 4px;
+          }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+
+      @keyframes slideIn {
+          from { transform: translateY(20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+      }
+
+      .fade-in {
+          animation: fadeIn 1s ease-out;
+      }
+
+      .slide-in {
+          animation: slideIn 0.5s ease-out;
+      }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG" alt="Online Bazar Nopara Logo" width="50" height="50">
-                    <a href="/">Online Bazar Nopara</a>
-                </div>
-                <nav>
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <ul class="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                  <img src="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG" alt="অনলাইন বাজার নোপাড়া লোগো" width="50" height="50">
+                  <a href="/">অনলাইন বাজার নোপাড়া</a>
+              </div>
+              <nav>
+                  <button class="mobile-menu-toggle" aria-label="মেনু টগল করুন">
+                      <i class="fas fa-bars"></i>
+                  </button>
+                  <ul class="nav-menu">
+                      <li><a href="#home">হোম</a></li>
+                      <li><a href="#products">পণ্যসমূহ</a></li>
+                      <li><a href="#categories">ক্যাটাগরি</a></li>
+                      <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                      <li><a href="#contact">যোগাযোগ</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Welcome to Online Bazar Nopara</h1>
-                    <p class="bangla-text">অনলাইন বাজার নোপাড়ায় আপনাকে স্বাগতম</p>
-                    <p>Discover amazing deals on top-quality products in Bangladesh</p>
-                    <a href="#products" class="cta-button">Shop Now</a>
-                </div>
-            </div>
-        </section>
+  <main>
+      <section id="home" class="hero">
+          <div class="container">
+              <div class="hero-content fade-in">
+                  <h1>অনলাইন বাজার নোপাড়ায় আপনাকে স্বাগতম</h1>
+                  <p>বাংলাদেশের সেরা পণ্যসমূহের অসাধারণ ডিল আবিষ্কার করুন</p>
+                  <a href="#products" class="cta-button">এখনই কিনুন</a>
+              </div>
+          </div>
+      </section>
 
-        <section id="products" class="featured-products">
-            <div class="container">
-                <h2 class="section-title">Featured Products</h2>
-                <p class="bangla-text section-subtitle">আমাদের বাছাইকৃত পণ্যসমূহ</p>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Smart LED TV" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Smart LED TV</h3>
-                            <p class="product-price">৳29,999</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Stylish Leather Bag" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Stylish Leather Bag</h3>
-                            <p class="product-price">৳1,999</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Modern Coffee Table" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Modern Coffee Table</h3>
-                            <p class="product-price">৳4,999</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="products" class="featured-products">
+          <div class="container">
+              <h2 class="section-title">বাছাইকৃত পণ্যসমূহ</h2>
+              <p class="section-subtitle">আমাদের সেরা অফারগুলি দেখুন</p>
+              <div class="product-grid">
+                  <div class="product-card slide-in">
+                      <div class="product-image">
+                          <img src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="স্মার্ট এলইডি টিভি" loading="lazy">
+                      </div>
+                      <div class="product-info">
+                          <h3 class="product-title">স্মার্ট এলইডি টিভি</h3>
+                          <p class="product-price">৳29,999</p>
+                          <div class="product-rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                          </div>
+                          <button onclick="atlos.Pay({merchantId: 'VJ30UOFJMO', orderId: 'TV001', orderAmount: 29999})">কিনুন</button>
+                      </div>
+                  </div>
+                  <div class="product-card slide-in">
+                      <div class="product-image">
+                          <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="স্টাইলিশ লেদার ব্যাগ" loading="lazy">
+                      </div>
+                      <div class="product-info">
+                          <h3 class="product-title">স্টাইলিশ লেদার ব্যাগ</h3>
+                          <p class="product-price">৳1,999</p>
+                          <div class="product-rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                          <button onclick="atlos.Pay({merchantId: 'VJ30UOFJMO', orderId: 'BAG001', orderAmount: 1999})">কিনুন</button>
+                      </div>
+                  </div>
+                  <div class="product-card slide-in">
+                      <div class="product-image">
+                          <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="আধুনিক কফি টেবিল" loading="lazy">
+                      </div>
+                      <div class="product-info">
+                          <h3 class="product-title">আধুনিক কফি টেবিল</h3>
+                          <p class="product-price">৳4,999</p>
+                          <div class="product-rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <button onclick="atlos.Pay({merchantId: 'VJ30UOFJMO', orderId: 'TABLE001', orderAmount: 4999})">কিনুন</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <section id="categories" class="categories">
-            <div class="container">
-                <h2 class="section-title">Shop by Category</h2>
-                <div class="category-grid">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3>Electronics</h3>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <h3>Fashion</h3>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Home & Living</h3>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <h3>Sports & Outdoors</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="categories" class="categories">
+          <div class="container">
+              <h2 class="section-title">ক্যাটাগরি অনুযায়ী কিনুন</h2>
+              <div class="category-grid">
+                  <div class="category-card fade-in">
+                      <div class="category-icon">
+                          <i class="fas fa-laptop"></i>
+                      </div>
+                      <h3>ইলেকট্রনিক্স</h3>
+                  </div>
+                  <div class="category-card fade-in">
+                      <div class="category-icon">
+                          <i class="fas fa-tshirt"></i>
+                      </div>
+                      <h3>ফ্যাশন</h3>
+                  </div>
+                  <div class="category-card fade-in">
+                      <div class="category-icon">
+                          <i class="fas fa-home"></i>
+                      </div>
+                      <h3>হোম এন্ড লিভিং</h3>
+                  </div>
+                  <div class="category-card fade-in">
+                      <div class="category-icon">
+                          <i class="fas fa-dumbbell"></i>
+                      </div>
+                      <h3>স্পোর্টস এন্ড আউটডোর</h3>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <section class="newsletter">
-            <div class="container">
-                <h2>Subscribe to Our Newsletter</h2>
-                <p>Get the latest deals and promotions directly to your inbox!</p>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
-                    <button type="submit" class="newsletter-button">Subscribe</button>
-                </form>
-            </div>
-        </section>
-    </main>
+      <section class="newsletter">
+          <div class="container">
+              <h2>আমাদের নিউজলেটারে সাবস্ক্রাইব করুন</h2>
+              <p>সর্বশেষ ডিল এবং প্রমোশন সরাসরি আপনার ইনবক্সে পান!</p>
+              <form class="newsletter-form">
+                  <input type="email" class="newsletter-input" placeholder="আপনার ইমেইল লিখুন" required>
+                  <button type="submit" class="newsletter-button">সাবস্ক্রাইব</button>
+              </form>
+          </div>
+      </section>
+  </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Online Bazar Nopara is your trusted marketplace for quality products and unbeatable deals in Bangladesh.</p>
-                    <p class="bangla-text">অনলাইন বাজার নোপাড়া বাংলাদেশের সবচেয়ে নির্ভরযোগ্য ই-কমার্স প্ল্যাটফর্ম।</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/OnlineBazarNoapara" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 OnlineBazarNopara.com. All rights reserved.</p>
-                <p class="bangla-text">সর্বস্বত্ব সংরক্ষিত &copy; ২০২৪ অনলাইন বাজার নোপাড়া</p>
-                <p>Warning: Unauthorized use or reproduction of content is strictly prohibited.</p>
-                <p class="bangla-text">সতর্কীকরণ: অননুমোদিত ব্যবহার বা কন্টেন্ট পুনরুত্পাদন সম্পূর্ণ নিষিদ্ধ।</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h3>আমাদের সম্পর্কে</h3>
+                  <p>অনলাইন বাজার নোপাড়া বাংলাদেশে মানসম্মত পণ্য এবং অতুলনীয় ডিলের জন্য আপনার বিশ্বস্ত মার্কেটপ্লেস।</p>
+              </div>
+              <div class="footer-section">
+                  <h3>দ্রুত লিঙ্ক</h3>
+                  <ul class="footer-links">
+                      <li><a href="#home">হোম</a></li>
+                      <li><a href="#products">পণ্যসমূহ</a></li>
+                      <li><a href="#categories">ক্যাটাগরি</a></li>
+                      <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                      <li><a href="#contact">যোগাযোগ</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h3>আমাদের সাথে যুক্ত হোন</h3>
+                  <div class="social-icons">
+                      <a href="https://github.com/OnlineBazarNoapara" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                      <a href="https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                      <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                      <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; ২০২৪ অনলাইনবাজারনোপাড়া.কম। সর্বস্বত্ব সংরক্ষিত।</p>
+              <p>সতর্কীকরণ: অননুমোদিত ব্যবহার বা কন্টেন্ট পুনরুত্পাদন সম্পূর্ণ নিষিদ্ধ।</p>
+          </div>
+      </div>
+  </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+  <script>
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
 
-        mobileMenuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+      mobileMenuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+      });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
 
-    <!-- JSON-LD for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Online Bazar Nopara",
-        "alternateName": "অনলাইন বাজার নোপাড়া",
-        "url": "https://onlinebazarnopara.com/",
-        "description": "Your trusted marketplace for quality products and unbeatable deals in Bangladesh",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://onlinebazarnopara.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "sameAs": [
-            "https://github.com/OnlineBazarNoapara",
-            "https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr"
-        ]
-    }
-    </script>
+      // Lazy loading images
+      document.addEventListener("DOMContentLoaded", function() {
+          var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+          if ("IntersectionObserver" in window) {
+              let lazyImageOb
+server = new IntersectionObserver(function(entries, observer) {
+                  entries.forEach(function(entry) {
+                      if (entry.isIntersecting) {
+                          let lazyImage = entry.target;
+                          lazyImage.src = lazyImage.dataset.src;
+                          lazyImage.classList.remove("lazy");
+                          lazyImageObserver.unobserve(lazyImage);
+                      }
+                  });
+              });
+
+              lazyImages.forEach(function(lazyImage) {
+                  lazyImageObserver.observe(lazyImage);
+              });
+          } else {
+              // Fallback for browsers that don't support IntersectionObserver
+              let lazyLoadThrottleTimeout;
+              
+              function lazyLoad () {
+                  if(lazyLoadThrottleTimeout) {
+                      clearTimeout(lazyLoadThrottleTimeout);
+                  }    
+
+                  lazyLoadThrottleTimeout = setTimeout(function() {
+                      let scrollTop = window.pageYOffset;
+                      lazyImages.forEach(function(img) {
+                          if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                              img.src = img.dataset.src;
+                              img.classList.remove('lazy');
+                          }
+                      });
+                      if(lazyImages.length == 0) { 
+                          document.removeEventListener("scroll", lazyLoad);
+                          window.removeEventListener("resize", lazyLoad);
+                          window.removeEventListener("orientationChange", lazyLoad);
+                      }
+                  }, 20);
+              }
+
+              document.addEventListener("scroll", lazyLoad);
+              window.addEventListener("resize", lazyLoad);
+              window.addEventListener("orientationChange", lazyLoad);
+          }
+      });
+  </script>
+
+  <!-- Atlos Payment Integration -->
+  <script async src="https://atlos.io/packages/app/atlos.js"></script>
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "অনলাইন বাজার নোপাড়া",
+      "alternateName": "Online Bazar Nopara",
+      "url": "https://onlinebazarnopara.com/",
+      "description": "বাংলাদেশে মানসম্মত পণ্য এবং অতুলনীয় ডিলের জন্য আপনার বিশ্বস্ত মার্কেটপ্লেস",
+      "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://onlinebazarnopara.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+      },
+      "sameAs": [
+          "https://github.com/OnlineBazarNoapara",
+          "https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr"
+      ]
+  }
+  </script>
 </body>
 </html>
 
