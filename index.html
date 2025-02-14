@@ -1,540 +1,676 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="en" dir="ltr">
 <head>
-    <meta charset='utf-8'/>
-    <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
-    <title><data:blog.title/> - <data:blog.pageTitle/></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <title>Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals</title>
+    <meta name="description" content="Discover amazing deals on electronics, fashion, home & living products at Online Bazar Nopara. Your one-stop shop for quality goods, unbeatable prices, and excellent customer service in Bangladesh.">
+    <meta name="keywords" content="online marketplace, e-commerce, shopping deals, electronics, fashion, home living, Bangladesh online shop, best prices, quality products, customer service">
     
-    <!-- SEO Meta Tags -->
-    <meta expr:content='data:blog.metaDescription' name='description'/>
-    <meta expr:content='data:blog.title' property='og:site_name'/>
-    <meta expr:content='data:blog.url' property='og:url'/>
-    <meta content='website' property='og:type'/>
-    <meta expr:content='data:blog.title' property='og:title'/>
-    <meta expr:content='data:blog.metaDescription' property='og:description'/>
-    <meta content='summary_large_image' name='twitter:card'/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
     
-    <b:if cond='data:blog.postImageUrl'>
-        <meta expr:content='data:blog.postImageUrl' property='og:image'/>
-        <meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
-    </b:if>
-    
-    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap' rel='stylesheet'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' rel='stylesheet'/>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://onlinebazarnopara.com/">
+    <meta property="og:title" content="Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals">
+    <meta property="og:description" content="Shop the best deals on electronics, fashion, and more at Online Bazar Nopara. Quality products, unbeatable prices, and excellent service in Bangladesh.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
 
-    <!-- Styles -->
-    <b:skin><![CDATA[
-    /* Variables */
-    :root {
-        --primary-color: #4a90e2;
-        --secondary-color: #f8f9fa;
-        --accent-color: #ff6b6b;
-        --text-color: #333333;
-        --link-color: #2970ff;
-        --border-color: #e9ecef;
-        --success-color: #28a745;
-        --warning-color: #ffc107;
-    }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://onlinebazarnopara.com/">
+    <meta property="twitter:title" content="Online Bazar Nopara - Your Trusted Marketplace for Shopping & Deals">
+    <meta property="twitter:description" content="Shop the best deals on electronics, fashion, and more at Online Bazar Nopara. Quality products, unbeatable prices, and excellent service in Bangladesh.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG">
 
-    /* Global Styles */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Roboto', Arial, sans-serif;
-        line-height: 1.6;
-        color: var(--text-color);
-        background: #ffffff;
-    }
+    <!-- Alternate URLs -->
+    <link rel="canonical" href="https://onlinebazarnopara.com/">
+    <link rel="alternate" href="https://onlinebazarnopara.github.io/" hreflang="en-us">
+    <link rel="alternate" href="https://onlinebazarnopara.vercel.app/" hreflang="en-gb">
 
-    a {
-        color: var(--link-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    a:hover {
-        color: var(--primary-color);
-    }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/li-ador-noirrit?styles=87152');
+    </style>
 
-    /* Header Styles */
-    .header {
-        background: var(--primary-color);
-        padding: 1rem;
-        color: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --gradient-1: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            --gradient-2: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            --text-color: #333333;
+            --light-text-color: #ffffff;
+            --link-color: #2970ff;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --error-color: #dc3545;
+        }
 
-    .blog-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* Navigation */
-    .nav-menu {
-        background: white;
-        padding: 0.5rem;
-        border-bottom: 1px solid var(--border-color);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        body {
+            font-family: 'Roboto', 'Li Ador Noirrit', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
 
-    .nav-menu ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-    }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .nav-menu li a {
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
+        /* Header Styles */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .nav-menu li a:hover {
-        background-color: var(--secondary-color);
-    }
-
-    /* Product Grid */
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .product-card {
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        overflow: hidden;
-        transition: transform 0.2s, box-shadow 0.2s;
-        background: white;
-    }
-
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .product-image img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .product-info {
-        padding: 1rem;
-    }
-
-    .product-title {
-        font-size: 1.1rem;
-        margin: 0 0 0.5rem;
-    }
-
-    .product-price {
-        font-weight: bold;
-        color: var(--accent-color);
-        margin-bottom: 0.5rem;
-    }
-
-    .add-to-cart {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .add-to-cart:hover {
-        background: var(--link-color);
-    }
-
-    /* Footer */
-    .footer {
-        background: var(--secondary-color);
-        padding: 2rem 0;
-        margin-top: 2rem;
-    }
-
-    .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
         .header-content {
-            flex-direction: column;
-            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav-menu ul {
-            flex-wrap: wrap;
+        .logo {
+            display: flex;
+            align-items: center;
         }
 
-        .product-grid {
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
         }
-    }
 
-    /* Cart Styles */
-    .cart-icon {
-        position: relative;
-        cursor: pointer;
-    }
-
-    #cart-count {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background: var(--accent-color);
-        color: white;
-        border-radius: 50%;
-        padding: 2px 6px;
-        font-size: 0.8rem;
-    }
-
-    /* Mobile Menu */
-    .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-        .mobile-menu-toggle {
-            display: block;
+        .logo a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu li {
+            list-style-type: none;
+        }
+
+        .nav-menu a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .mobile-menu-toggle {
             display: none;
+            background: none;
+            border: none;
+            color: var(--light-text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
-        .nav-menu.active {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 1000;
-            padding: 2rem;
-        }
-
-        .nav-menu.active ul {
-            flex-direction: column;
+        /* Hero Section */
+        .hero {
+            background-image: var(--gradient-1), url('https://source.unsplash.com/random/1600x900/?marketplace');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            height: 70vh;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-text-color);
+            margin-top: 60px;
         }
-    }
 
-    /* Search Bar */
-    .search-form {
-        display: flex;
-        margin-bottom: 1rem;
-    }
-
-    .search-input {
-        flex-grow: 1;
-        padding: 0.5rem;
-        border: 1px solid var(--border-color);
-        border-right: none;
-        border-radius: 4px 0 0 4px;
-    }
-
-    .search-button {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-    }
-
-    /* Pagination */
-    .pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-    }
-
-    .pagination a {
-        padding: 0.5rem 1rem;
-        margin: 0 0.25rem;
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    .pagination a:hover {
-        background-color: var(--secondary-color);
-    }
-
-    /* Product Labels */
-    .product-label {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-
-    .label-sale {
-        background: var(--accent-color);
-        color: white;
-    }
-
-    .label-new {
-        background: var(--success-color);
-        color: white;
-    }
-
-    /* Accessibility */
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-    ]]></b:skin>
-
-    <!-- Custom Scripts -->
-    <script>//<![CDATA[
-    // Shopping Cart functionality
-    let cart = [];
-    
-    function addToCart(productId, productName, price) {
-        cart.push({id: productId, name: productName, price: price});
-        updateCartUI();
-        showNotification('Product added to cart!');
-    }
-
-    function updateCartUI() {
-        const cartCount = document.getElementById('cart-count');
-        if(cartCount) {
-            cartCount.textContent = cart.length;
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            backdrop-filter: blur(5px);
         }
-    }
 
-    function showNotification(message) {
-        const notification = document.createElement('div');
-        notification.textContent = message;
-        notification.style.position = 'fixed';
-        notification.style.bottom = '20px';
-        notification.style.right = '20px';
-        notification.style.backgroundColor = 'var(--success-color)';
-        notification.style.color = 'white';
-        notification.style.padding = '10px';
-        notification.style.borderRadius = '4px';
-        notification.style.zIndex = '1000';
-        document.body.appendChild(notification);
-        setTimeout(() => {
-            notification.remove();
-        }, 3000);
-    }
-
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.toggle('active');
-    }
-
-    // Lazy Loading Images
-    document.addEventListener("DOMContentLoaded", function() {
-        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-        if ("IntersectionObserver" in window) {
-            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        let lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.remove("lazy");
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function(lazyImage) {
-                lazyImageObserver.observe(lazyImage);
-            });
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
-    });
-    //]]></script>
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bangla-text {
+            font-family: 'Li Ador Noirrit', sans-serif;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-image: var(--gradient-1);
+            color: var(--light-text-color);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Featured Products */
+        .featured-products {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-image: var(--gradient-2);
+            background-blend-mode: overlay;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .product-rating {
+            color: var(--warning-color);
+            margin-top: 0.5rem;
+        }
+
+        /* Categories Section */
+        .categories {
+            background-color: var(--light-text-color);
+            padding: 4rem 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            background-color: var(--border-color);
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-image: var(--gradient-2);
+            color: var(--light-text-color);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-input {
+            padding: 0.8rem;
+            width: 300px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .newsletter-button {
+            background-color: var(--accent-color);
+            color: var(--light-text-color);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-button:hover {
+            background-color: #ff8585;
+        }
+
+        /* Footer */
+        .footer {
+            background-image: linear-gradient(to bottom, #2c3e50, #1a252f);
+            color: var(--light-text-color);
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: var(--light-text-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin-bottom: 0.5rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter-input {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 1rem;
+                border-radius: 4px;
+            }
+
+            .newsletter-button {
+                width: 100%;
+                max-width: 300px;
+                border-radius: 4px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Header -->
-    <header class='header'>
-        <div class='header-content'>
-            <div class='blog-title'>
-                <b:section id='header' maxwidgets='1'>
-                    <b:widget id='Header1' locked='true' type='Header'/>
-                </b:section>
-            </div>
-            <div class='search-cart'>
-                <b:section id='search' maxwidgets='1'>
-                    <b:widget id='BlogSearch1' locked='false' type='BlogSearch'/>
-                </b:section>
-                <div class='cart-icon'>
-                    <i class='fas fa-shopping-cart'></i>
-                    <span id='cart-count'>0</span>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/OnlineBazarNoapara/onlinebazarnoapara.github.io/refs/heads/main/logo.PNG" alt="Online Bazar Nopara Logo" width="50" height="50">
+                    <a href="/">Online Bazar Nopara</a>
                 </div>
+                <nav>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class='mobile-menu-toggle' onclick='toggleMobileMenu()'>
-                <i class='fas fa-bars'></i>
-                <span class='sr-only'>Toggle menu</span>
-            </button>
         </div>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav class='nav-menu'>
-        <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/search/label/electronics'>Electronics</a></li>
-            <li><a href='/search/label/fashion'>Fashion</a></li>
-            <li><a href='/search/label/home-living'>Home &amp; Living</a></li>
-            <li><a href='/deals'>Deals</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to Online Bazar Nopara</h1>
+                    <p class="bangla-text">অনলাইন বাজার নোপাড়ায় আপনাকে স্বাগতম</p>
+                    <p>Discover amazing deals on top-quality products in Bangladesh</p>
+                    <a href="#products" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Main Content -->
-    <main class='main-content'>
-        <b:section id='main' showaddelement='true'>
-            <b:widget id='Blog1' locked='true' type='Blog'>
-                <b:includable id='main' var='top'>
-                    <!-- Post Display Template -->
-                    <b:if cond='data:blog.pageType == &quot;index&quot;'>
-                        <div class='product-grid'>
-                            <b:loop values='data:posts' var='post'>
-                                <article class='product-card'>
-                                    <div class='product-image'>
-                                        <b:if cond='data:post.thumbnailUrl'>
-                                            <img class='lazy' expr:data-src='data:post.thumbnailUrl' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
-                                        </b:if>
-                                        <b:if cond='data:post.labels any (l => l.name == &quot;sale&quot;)'>
-                                            <span class='product-label label-sale'>Sale</span>
-                                        </b:if>
-                                        <b:if cond='data:post.labels any (l => l.name == &quot;new&quot;)'>
-                                            <span class='product-label label-new'>New</span>
-                                        </b:if>
-                                    </div>
-                                    <div class='product-info'>
-                                        <h2 class='product-title'><data:post.title/></h2>
-                                        <div class='product-price'>
-                                            <b:if cond='data:post.labels any (l => l.name == &quot;price&quot;)'>
-                                                <data:post.labels first (l => l.name == &quot;price&quot;).name/>
-                                            </b:if>
-                                        </div>
-                                        <button class='add-to-cart' expr:onclick='&quot;addToCart(\&quot;&quot; + data:post.id + &quot;\&quot;, \&quot;&quot; + data:post.title + &quot;\&quot;, \&quot;&quot; + data:post.labels first (l => l.name == &quot;price&quot;).name + &quot;\&quot;)&quot;'>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </article>
-                            </b:loop>
+        <section id="products" class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="bangla-text section-subtitle">আমাদের বাছাইকৃত পণ্যসমূহ</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Smart LED TV" loading="lazy">
                         </div>
-                        <!-- Pagination -->
-                        <b:if cond='data:olderPageUrl'>
-                            <div class='pagination'>
-                                <a expr:href='data:olderPageUrl'>&lt; Older Posts</a>
-                                <b:if cond='data:newerPageUrl'>
-                                    <a expr:href='data:newerPageUrl'>Newer Posts &gt;</a>
-                                </b:if>
+                        <div class="product-info">
+                            <h3 class="product-title">Smart LED TV</h3>
+                            <p class="product-price">৳29,999</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
-                        </b:if>
-                    </b:if>
-                </b:includable>
-            </b:widget>
-        </b:section>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Stylish Leather Bag" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Stylish Leather Bag</h3>
+                            <p class="product-price">৳1,999</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Modern Coffee Table" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Modern Coffee Table</h3>
+                            <p class="product-price">৳4,999</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Electronics</h3>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Fashion</h3>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home & Living</h3>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Sports & Outdoors</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest deals and promotions directly to your inbox!</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class='footer'>
-        <div class='footer-content'>
-            <b:section class='footer-widgets' id='footer-1' preferred='yes'>
-                <b:widget id='HTML1' title='About Us' type='HTML'>
-                    <b:includable id='main'>
-                        <h2 class='title'><data:title/></h2>
-                        <div class='widget-content'>
-                            <data:content/>
-                        </div>
-                    </b:includable>
-                </b:widget>
-            </b:section>
-            <b:section class='footer-widgets' id='footer-2' preferred='yes'>
-                <b:widget id='LinkList1' title='Quick Links' type='LinkList'>
-                    <b:includable id='main'>
-                        <h2 class='title'><data:title/></h2>
-                        <div class='widget-content'>
-                            <ul>
-                                <b:loop values='data:links' var='link'>
-                                    <li><a expr:href='data:link.target'><data:link.name/></a></li>
-                                </b:loop>
-                            </ul>
-                        </div>
-                    </b:includable>
-                </b:widget>
-            </b:section>
-            <b:section class='footer-widgets' id='footer-3' preferred='yes'>
-                <b:widget id='HTML2' title='Newsletter' type='HTML'>
-                    <b:includable id='main'>
-                        <h2 class='title'><data:title/></h2>
-                        <div class='widget-content'>
-                            <form class='newsletter-form'>
-                                <input type='email' placeholder='Enter your email' required='required'/>
-                                <button type='submit'>Subscribe</button>
-                            </form>
-                        </div>
-                    </b:includable>
-                </b:widget>
-            </b:section>
-        </div>
-        <div class='footer-bottom'>
-            <p>&copy; 2024 <data:blog.title/>. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Online Bazar Nopara is your trusted marketplace for quality products and unbeatable deals in Bangladesh.</p>
+                    <p class="bangla-text">অনলাইন বাজার নোপাড়া বাংলাদেশের সবচেয়ে নির্ভরযোগ্য ই-কমার্স প্ল্যাটফর্ম।</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/OnlineBazarNoapara" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OnlineBazarNopara.com. All rights reserved.</p>
+                <p class="bangla-text">সর্বস্বত্ব সংরক্ষিত &copy; ২০২৪ অনলাইন বাজার নোপাড়া</p>
+                <p>Warning: Unauthorized use or reproduction of content is strictly prohibited.</p>
+                <p class="bangla-text">সতর্কীকরণ: অননুমোদিত ব্যবহার বা কন্টেন্ট পুনরুত্পাদন সম্পূর্ণ নিষিদ্ধ।</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Schema.org Markup -->
-    <script type='application/ld+json'>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "<data:blog.title/>",
-        "url": "<data:blog.homepageUrl/>",
+        "name": "Online Bazar Nopara",
+        "alternateName": "অনলাইন বাজার নোপাড়া",
+        "url": "https://onlinebazarnopara.com/",
+        "description": "Your trusted marketplace for quality products and unbeatable deals in Bangladesh",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "<data:blog.homepageUrl/>search?q={search_term_string}",
+            "target": "https://onlinebazarnopara.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-        }
+        },
+        "sameAs": [
+            "https://github.com/OnlineBazarNoapara",
+            "https://www.facebook.com/share/1ESWZ6aNjX/?mibextid=wwXIfr"
+        ]
     }
     </script>
 </body>
 </html>
+
